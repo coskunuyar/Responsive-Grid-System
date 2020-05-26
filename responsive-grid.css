@@ -1,15 +1,8 @@
-.row::after {
-    content: "";
-    clear: both;
+.row{
     display: flex;
-  }
-  
-[class*="col-"] {
-    float: left;
-    padding: 15px;
-    box-sizing: border-box;
+    flex-wrap: wrap;
 }
-
+  
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
     .col-xs-1 {width: 8.33%;}
