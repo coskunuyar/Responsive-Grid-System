@@ -2,6 +2,10 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+[class*="col-"] {	
+    box-sizing: border-box;	
+}
   
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
