@@ -1,0 +1,22 @@
+.row{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+@mixin getColumn($columnName, $columnSize ,$mediaRule, $commentSection){
+    /* #{$commentSection} */
+    @media only screen and (#{$mediaRule}){
+        @for $i from 1 through $columnSize{
+            .col-#{$columnName}-#{$i}{
+                width: 100/($columnSize/$i) * 1%;
+                box-sizing: border-box;
+            }
+        }
+    }
+}
+
+@include getColumn("xs",24,"max-width: 600px","Extra small devices (phones, 600px and down)");
+@include getColumn("sm",24,"min-width: 600px","Small devices (portrait tablets and large phones, 600px and up)");
+@include getColumn("md",24,"min-width: 768px","Medium devices (landscape tablets, 768px and up)");
+@include getColumn("lg",24,"min-width: 992px","Large devices (laptops/desktops, 992px and up)");
+@include getColumn("xl",24,"min-width: 1200px","Extra large devices (large laptops and desktops, 1200px and up)");
