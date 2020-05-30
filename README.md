@@ -1,4 +1,4 @@
-# Responsive-Grid-System-SASS
+# Responsive-Grid-System-SASS-SCSS
 #### Responsive grid system with n=24 columns that help you design responsive web applications with different devices.
 
         <div class="row">
